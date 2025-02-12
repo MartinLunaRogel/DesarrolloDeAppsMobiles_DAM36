@@ -1,8 +1,23 @@
 import { CheckBox } from '@rneui/base';
 import { StatusBar } from 'expo-status-bar';
 import { ScrollView, StyleSheet, Text, View } from 'react-native';
+import { useState } from 'react';
 
 export default function App() {
+
+  const items = [
+    {id: 'checked1', title: 'leche'},
+    {id: 'checked2', title: 'huevo'},
+    {id: 'checked3', title: 'cereal'},
+    {id: 'checked4', title: 'azucal'},
+  ]
+
+  const 
+  const [checkedI, setChecked] = useState(false);
+  const checkHnandler = () => {
+    checked ? setChecked(false) : setChecked(true)
+  }
+
   return (
     <View style={styles.container}>
       <View style={styles.navbarContainer}>
@@ -13,23 +28,10 @@ export default function App() {
           <Text style={styles.titleTextBody}>Lista de compras</Text>
         </View>
           <ScrollView style={styles.bodyContent}>
-            <CheckBox title="leche" containerStyle={styles.CheckBox}/>
-            <CheckBox title="Pan" containerStyle={styles.CheckBox}/>
-            <CheckBox title="Huevo"containerStyle={styles.CheckBox}/>
-            <CheckBox title="Confleis" containerStyle={styles.CheckBox}/>
-            <CheckBox title="Azucar" containerStyle={styles.CheckBox}/>
-            <CheckBox title="Cafe" containerStyle={styles.CheckBox}/>
-            <CheckBox title="Harina" containerStyle={styles.CheckBox}/>
-            <CheckBox title="Cereal" containerStyle={styles.CheckBox}/>
-            <CheckBox title="Fruta" containerStyle={styles.CheckBox}/>
-            <CheckBox title="Verdura" containerStyle={styles.CheckBox}/>
-            <CheckBox title="Chicharron" containerStyle={styles.CheckBox}/>
-            <CheckBox title="Queso" containerStyle={styles.CheckBox}/>
-            <CheckBox title="Chetos" containerStyle={styles.CheckBox}/>
-            <CheckBox title="Vaca" containerStyle={styles.CheckBox}/>
-            <CheckBox title="Coca Cola" containerStyle={styles.CheckBox}/>
-            <CheckBox title="Sabritas" containerStyle={styles.CheckBox}/>
-            <CheckBox title="Balas" containerStyle={styles.CheckBox}/>
+            <CheckBox title="leche" containerStyle={styles.CheckBox} checked ={checked} onPress={checkHnandler}/>
+            <CheckBox title="Pan" containerStyle={styles.CheckBox} checked ={checked2} onPress={checkHnandler2}/>
+            <CheckBox title="Huevo"containerStyle={styles.CheckBox} checked ={checked3} onPress={checkHnandler3}/>
+            <CheckBox title="Confleis" containerStyle={styles.CheckBox} checked ={checked4} onPress={checkHnandler4}/>
         </ScrollView>
       </View>
     </View>
@@ -85,7 +87,7 @@ const styles = StyleSheet.create({
       width: '80%',
       fontSize: 15,
       marginLeft: '10%',
-      borderRadius: 10
+      borderRadius: 12
 
     }
 
