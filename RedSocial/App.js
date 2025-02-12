@@ -34,7 +34,7 @@ export default function App() {
       <View style={estilos.infoUsuario}>
         <Text style={estilos.nombreUsuario}>Martin Luna</Text>
         <Text style={estilos.descripcionUsuario}>
-          Desarrollador móvil | Apasionado por la tecnología 🌟
+          Desarrollo de aplicacione moviles | React Native 
         </Text>
         <TouchableOpacity style={estilos.botonEditarPerfil}>
           <Text style={estilos.textoBotonEditar}>Editar perfil</Text>
@@ -56,6 +56,7 @@ const estilos = StyleSheet.create({
   contenedor: {
     flex: 1,
     backgroundColor: '#000',
+    marginTop: 30
   },
   cabeceraPerfil: {
     flexDirection: 'row',
