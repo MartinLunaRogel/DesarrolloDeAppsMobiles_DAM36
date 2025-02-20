@@ -1,5 +1,4 @@
 import { CheckBox } from '@rneui/base';
-import { StatusBar } from 'expo-status-bar';
 import { ScrollView, StyleSheet, Text, View } from 'react-native';
 import { useState } from 'react';
 
@@ -12,10 +11,24 @@ export default function App() {
     {id: 'checked4', title: 'azucal'},
   ]
 
-  const 
-  const [checkedI, setChecked] = useState(false);
-  const checkHnandler = () => {
-    checked ? setChecked(false) : setChecked(true)
+  const [checked1, setChecked1] = useState(false);
+  const checkHnandler1 = () => {
+    checked1 ? setChecked1(false) : setChecked1(true)
+  }
+
+  const [checked2, setChecked2] = useState(false);
+  const checkHnandler2 = () => {
+    checked2 ? setChecked2(false) : setChecked2(true)
+  }
+
+  const [checked3, setChecked3] = useState(false);
+  const checkHnandler3 = () => {
+    checked3 ? setChecked3(false) : setChecked3(true)
+  }
+
+  const [checked4, setChecked4] = useState(false);
+  const checkHnandler4 = () => {
+    checked4? setChecked4(false) : setChecked4(true)
   }
 
   return (
@@ -28,7 +41,7 @@ export default function App() {
           <Text style={styles.titleTextBody}>Lista de compras</Text>
         </View>
           <ScrollView style={styles.bodyContent}>
-            <CheckBox title="leche" containerStyle={styles.CheckBox} checked ={checked} onPress={checkHnandler}/>
+            <CheckBox title="leche" containerStyle={styles.CheckBox} checked ={checked1} onPress={checkHnandler1}/>
             <CheckBox title="Pan" containerStyle={styles.CheckBox} checked ={checked2} onPress={checkHnandler2}/>
             <CheckBox title="Huevo"containerStyle={styles.CheckBox} checked ={checked3} onPress={checkHnandler3}/>
             <CheckBox title="Confleis" containerStyle={styles.CheckBox} checked ={checked4} onPress={checkHnandler4}/>
